@@ -188,7 +188,7 @@ export default function Product(props) {
 
     const [selectedImage, setSelectedImage] = useState(data.image[0]);
     return (
-        <div className="bg-gray-900 mt-24 w-full text-white min-h-full p-8">
+        <div className="bg-gray-900 mt-24 w-3/4 text-white min-h-full p-8">
             <Enquiry product={data} isOpen={isOpen} toggleModal={toggleModal} />
             <div className="w-full mx-auto flex">
                 <div className="w-1/2 pr-6">
