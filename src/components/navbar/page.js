@@ -4,13 +4,13 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Navbar = () => {
-  
+
 
   return (
     <nav className="fixed flex align-middle top-0 backdrop-blur-md text-base border-b-[0.5px] border-b-slate-700 flex-row text-white py-4 px-6 md:px-10 w-3/4 justify-between" >
-          <div className="flex flex-row">
-            <Link href="/">
-              <span className="mx-2">Space-Con</span>
+          <div className="flex flex-row justify-center text-center align-middle">
+            <Link href="/" className='flex flex-row items-center'>
+              Space-Con
             </Link>
           </div>
         <div className="flex border-2 py-2 px-8 gap-4 bg- border-gray-800 rounded-full flex-row">
