@@ -1,11 +1,13 @@
+// 'use client'
+
 import './globals.css'
 import { Inter } from 'next/font/google'
 import NavBar from '@/components/navbar/page'
 import Footer from '@/components/footer/page'
+import { AuthContextProvider } from './context/AuthContext'
 import Head from 'next/head'
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Space-Con',
@@ -13,7 +15,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-    
   return (
     <html lang="en">
       <Head>
@@ -23,10 +24,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <body className={inter.className}>
-      <NavBar />
-        {children}
-        <Footer />
-        </body>
+        <AuthContextProvider>
+          <NavBar />
+          {children}
+          {/* <Footer /> */}
+        </AuthContextProvider>
+      </body>
     </html>
   )
 }
